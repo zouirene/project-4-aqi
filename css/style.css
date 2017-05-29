@@ -1,0 +1,534 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", "Open Sans", "Sans Serif";
+  background-color: deepskyblue;
+  color: white;
+  letter-spacing: 2.5px;
+  height: 100vh;
+  overflow: hidden; }
+
+.wrapper {
+  transition: all 0.3s; }
+
+.titleSmall {
+  display: none; }
+
+.title {
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 320px;
+  font-weight: 400;
+  opacity: 1;
+  margin: 0;
+  letter-spacing: 0;
+  line-height: 0.8;
+  text-align: left;
+  font-family: lobster;
+  opacity: 0.1;
+  max-width: 1000px; }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden; }
+  .container .inputField {
+    position: relative;
+    margin-right: 2vw;
+    border-bottom: 1px solid white;
+    padding-bottom: 2vh;
+    width: 700px; }
+    .container .inputField .inputPlaceholder {
+      font-weight: 200;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 30px;
+      transition: all 0.3s;
+      float: left; }
+    .container .inputField #city {
+      background-color: transparent;
+      border: none;
+      height: 50px;
+      width: 90%;
+      color: white;
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: 200;
+      float: left; }
+      .container .inputField #city::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #fff;
+        opacity: 0; }
+      .container .inputField #city[type=text]:focus {
+        outline: none; }
+    .container .inputField .tp-ac__list {
+      position: absolute;
+      top: 8vh;
+      padding-left: 0; }
+      .container .inputField .tp-ac__list li {
+        font-weight: 200;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 2;
+        opacity: 0.7;
+        transition: all 0.3; }
+        .container .inputField .tp-ac__list li:hover {
+          opacity: 1;
+          cursor: pointer; }
+    .container .inputField #submit {
+      width: 50px;
+      height: 50px;
+      text-indent: -100000px;
+      border: none;
+      background-color: transparent;
+      float: right;
+      display: inline-block;
+      background-image: url(../assets/search.png);
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: center center; }
+
+pre {
+  display: none; }
+
+li {
+  list-style-type: none; }
+
+img {
+  width: 25px;
+  height: auto; }
+
+button {
+  background-color: transparent;
+  border: none; }
+
+.wrapperSmall {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px; }
+
+.location .date {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1; }
+
+.location .locationData {
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1; }
+
+.location button {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px; }
+  .location button img {
+    width: 100%; }
+
+.weatherSection .temp {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 5px; }
+  .weatherSection .temp .tempValue {
+    font-size: 80px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 6px;
+    line-height: 1.2;
+    display: inline-block; }
+  .weatherSection .temp .tempUnit {
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 3px;
+    position: relative;
+    top: 0;
+    line-height: 1.6; }
+
+.weatherSection .mainConditionValue {
+  margin: 0 5px 0 0;
+  font-size: 35px;
+  opacity: 0.8;
+  font-weight: 300; }
+
+.pollutionData {
+  margin-right: 0;
+  width: 100%; }
+  .pollutionData .pm25 {
+    margin: auto;
+    width: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .pollutionData .pm25 .pm25Title {
+      font-size: 40px;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      margin-right: 20px;
+      margin-top: 0;
+      margin-bottom: 0; }
+    .pollutionData .pm25 .pm25Value {
+      font-size: 250px;
+      line-height: 0.8;
+      margin: 0;
+      font-weight: 400; }
+  .pollutionData .pm25caption {
+    text-align: center;
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: 300; }
+  .pollutionData .otherPollutantSection {
+    margin-top: 5vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .pollutionData .otherPollutantSection .otherPollutantCell {
+      width: 15%;
+      text-align: center; }
+      .pollutionData .otherPollutantSection .otherPollutantCell h3 {
+        font-size: 25px;
+        margin: 0;
+        font-weight: 300;
+        opacity: 0.5; }
+      .pollutionData .otherPollutantSection .otherPollutantCell h4 {
+        font-size: 50px;
+        margin: 0; }
+
+@media (max-width: 840px) {
+  .container .inputField {
+    margin-right: 1vw;
+    width: 400px; }
+    .container .inputField #city {
+      width: 70%; }
+  .title {
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    font-size: 230px;
+    font-weight: 400;
+    opacity: 1;
+    margin: 0;
+    letter-spacing: 0;
+    line-height: 0.8;
+    text-align: left;
+    font-family: lobster;
+    opacity: 0.1;
+    max-width: 100vw; }
+  .location .locationData {
+    font-size: 35px; }
+  .weatherSection .temp .tempValue {
+    font-size: 50px; }
+  .weatherSection .temp .tempUnit {
+    font-size: 20px; }
+  .weatherSection .mainConditionValue {
+    font-size: 28px; }
+  .pollutionData {
+    margin-right: 0;
+    width: 100%;
+    margin-top: 2vh; }
+    .pollutionData .pm25 .pm25Title {
+      font-size: 35px; }
+    .pollutionData .pm25 .pm25Value {
+      font-size: 230px;
+      line-height: 0.8;
+      margin: 0;
+      font-weight: 400; }
+    .pollutionData .pm25caption {
+      font-size: 28px;
+      width: 100%;
+      margin: 4vh auto; }
+    .pollutionData .otherPollutantSection {
+      margin-top: 7vh;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .pollutionData .otherPollutantSection .otherPollutantCell {
+        width: 20%; }
+        .pollutionData .otherPollutantSection .otherPollutantCell h3 {
+          font-size: 23px;
+          margin: 0;
+          font-weight: 300;
+          opacity: 0.5; }
+        .pollutionData .otherPollutantSection .otherPollutantCell h4 {
+          font-size: 38px;
+          font-weight: 400; } }
+
+@media (max-width: 640px) {
+  .title {
+    display: none; }
+  .container .titleSmall {
+    display: block;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 8vh;
+    letter-spacing: 0;
+    line-height: 1;
+    opacity: 0.8;
+    width: 80%;
+    margin-top: 0;
+    font-family: lobster; }
+  .container .inputField {
+    margin-right: 1vw;
+    width: 80%;
+    margin-bottom: 5vh; }
+    .container .inputField #city {
+      width: 70%;
+      font-size: 23px; }
+    .container .inputField .inputPlaceholder {
+      bottom: 1vh;
+      left: 0;
+      font-size: 23px; }
+    .container .inputField .tp-ac__list {
+      top: 10vh;
+      height: 40vh;
+      overflow: hidden; }
+      .container .inputField .tp-ac__list li {
+        font-size: 18px; }
+  .location .locationData {
+    font-size: 28px; }
+  .weatherSection .temp .tempValue {
+    font-size: 40px; }
+  .weatherSection .temp .tempUnit {
+    font-size: 20px; }
+  .weatherSection .mainConditionValue {
+    font-size: 25px; }
+  .pollutionData .pm25 .pm25Title {
+    font-size: 28px; }
+  .pollutionData .pm25 .pm25Value {
+    font-size: 200px; }
+  .pollutionData .pm25caption {
+    font-size: 25px;
+    width: 100%;
+    margin: 4vh auto; }
+  .pollutionData .otherPollutantSection {
+    margin-top: 7vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .pollutionData .otherPollutantSection .otherPollutantCell {
+      width: 20%; }
+      .pollutionData .otherPollutantSection .otherPollutantCell h3 {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 300;
+        opacity: 0.5; }
+      .pollutionData .otherPollutantSection .otherPollutantCell h4 {
+        font-size: 25px;
+        font-weight: 400; }
+      .pollutionData .otherPollutantSection .otherPollutantCell:last-child {
+        width: auto; } }
+
+@media (max-width: 480px) {
+  .weatherSection .temp .tempValue {
+    font-size: 30px; }
+  .weatherSection .temp .tempUnit {
+    font-size: 10px; }
+  .weatherSection .mainConditionValue {
+    font-size: 25px; }
+  .location .date {
+    font-size: 16px; }
+  .location .locationData {
+    font-size: 20px; }
+  .location button {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px; }
+  .pollutionData {
+    width: 85%;
+    margin: auto;
+    margin-top: 1vh; }
+    .pollutionData .pm25 .pm25Title {
+      font-size: 28px;
+      margin-right: 0; }
+    .pollutionData .pm25 .pm25Value {
+      font-size: 130px;
+      line-height: 0.8;
+      margin: 0;
+      font-weight: 400; }
+    .pollutionData .pm25caption {
+      font-size: 23px; }
+    .pollutionData .otherPollutantSection {
+      margin-top: 3vh;
+      text-align: center; }
+      .pollutionData .otherPollutantSection .otherPollutantCell {
+        width: 100px;
+        margin-bottom: 3vh; }
+        .pollutionData .otherPollutantSection .otherPollutantCell h3 {
+          font-size: 16px;
+          margin: 0;
+          font-weight: 300;
+          opacity: 0.5; }
+        .pollutionData .otherPollutantSection .otherPollutantCell h4 {
+          font-size: 20px; }
+        .pollutionData .otherPollutantSection .otherPollutantCell:last-child {
+          width: 100px; } }

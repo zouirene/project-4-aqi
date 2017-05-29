@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+<body>
+
+        <h1 class="title">What's in the air?</h1>
+<div class="wrapper">
+    <div class="container">
+        <h1 class="titleSmall">What's in the air?</h1>
+        <div class="inputField clearfix">
+            <h1 class="inputPlaceholder">Your location</h1>
+            <input type="text" id="city" class="my-input" name="field" placeholder="Search For a City" tabindex="1" autocomplete="off">
+           <input type="button" id="submit" value="Search">
+        </div>
+        <div class="results"></div>
+        <div id="error"></div>
+
+        <script src="teleport-autocomplete.js"></script>
+        <script>
+          var $results = document.querySelector('.results');
+          var appendToResult = $results.insertAdjacentHTML.bind($results, 'afterend');
+
+          TeleportAutocomplete.init('.my-input').on('change', function(value) {
+            appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+          });
+        </script>
+    </div>
+
+
+    <div class="wrapperSmall">
+    <!-- LOCATION SECTION -->
+
+
+            <section class="location">
+                <h2 class="date"></h2>
+                <span class="locationData"></span>
+                <button class="changeLocation"><img src="placeholder.png" alt="search for"></button>
+            </section>
+            <section class="weatherSection">
+                <div class="temperature">
+                    <div class="temp">
+                        <h2 class="tempValue"></h2><span class="tempUnit">C</span>
+                    </div>
+
+                </div>
+                <div class="mainCondition">
+                    <h2 class="mainConditionValue"></h2>
+                </div>
+
+            </section>
+
+            <!-- PM25 DATA SECTION -->
+            <section class="pollutionData">
+                <div class="pm25">
+                    <h2 class="pm25Title">PM2.5</h2>
+                    <h3 class="pm25Value"></h3>
+                </div>
+                <h3 class="pm25caption">
+                </h3>
+                <div class="otherPollutantSection">
+
+                </div>
+            </section>
+    </div>
+
+
+
+</div>
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
